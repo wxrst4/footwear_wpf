@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4d4d0ac394d541f89113a46c9b6c3e6f" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="footwear_dbModel.address" Width="1.5" PointX="11" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.category" Width="1.5" PointX="8.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.manufacturer" Width="1.5" PointX="8.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.order" Width="1.5" PointX="13.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.product" Width="1.5" PointX="11" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.role" Width="1.5" PointX="8.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.supplier" Width="1.5" PointX="8.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.sysdiagram" Width="1.5" PointX="13.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="footwear_dbModel.user" Width="1.5" PointX="11" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="footwear_dbModel.FK_orders_address" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.FK_products_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.FK_products_manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.FK_orders_products" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.FK_orders_users" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.FK_products_suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="footwear_dbModel.user_roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

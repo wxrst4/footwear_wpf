@@ -1,0 +1,67 @@
+﻿<Window x:Class="footwear_wpf.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:footwear_wpf"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="464" Width="800">
+    <Grid>
+
+        <DataGrid Name = "ProductsDataGrid" Margin="0,0,0,307" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header = "Артикул" Binding="{Binding article}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Название" Binding="{Binding product_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Производитель" Binding="{Binding manufacturer.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Категория" Binding="{Binding category.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Единица измерения" Binding="{Binding unit}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Цена" Binding="{Binding price}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Поставщик" Binding="{Binding supplier.nane}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Скидка" Binding="{Binding discount}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Кол-во" Binding="{Binding stock}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Описание" Binding="{Binding description}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <Button Content="Фильтрация товаров по цене" HorizontalAlignment="Left" Margin="7,364,0,0" VerticalAlignment="Top" Height="19" Width="168" Click="BtnFilterProductByPrice"/>
+        <Button Content="Сортировка товара по производителям" HorizontalAlignment="Left" Margin="7,388,0,0" VerticalAlignment="Top" Height="19" Width="239" Click="BtnOrderByProductByManufacturer"/>
+        <TextBox Name = "tbProductName" HorizontalAlignment="Left" Margin="7,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="19"/>
+        <Button Content="Поиск товара по имени" HorizontalAlignment="Left" Margin="7,340,0,0" VerticalAlignment="Top" Height="19" Width="168" Click="BtnSearchProductByName"/>
+        <Label Content="Введите имя товара" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Height="33" Width="127"/>
+
+        <DataGrid Name = "OrdersDataGrid" Margin="0,132,0,174" AutoGenerateColumns="False" RenderTransformOrigin="0.541,0.487">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header = "Id заказа" Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Артикул продукта" Binding="{Binding product.article}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Дата создания" Binding="{Binding created_at}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Дата доставки" Binding="{Binding delivered_at}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Адрес" Binding="{Binding address.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Пользователь" Binding="{Binding user.fullname}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Код" Binding="{Binding code}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Статус" Binding="{Binding status}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Label Content="Введите статус заказа" HorizontalAlignment="Left" Margin="264,278,0,0" VerticalAlignment="Top" Height="33" Width="136" RenderTransformOrigin="0.486,0.676"/>
+        <TextBox x:Name = "tbOrderStatus" HorizontalAlignment="Left" Margin="264,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="19"/>
+        <Button Content="Поиск заказа по статусу" HorizontalAlignment="Left" Margin="264,340,0,0" VerticalAlignment="Top" Height="19" Width="149" Click="BtnSearchOrderByStatus"/>
+        <Button Content="Фильтрация заказов по дате создания" HorizontalAlignment="Left" Margin="264,364,0,0" VerticalAlignment="Top" Height="19" Width="222" Click="BtnFilterOrderByCreatedAt"/>
+        <Button Content="Сортировка заказа по дате доставки" HorizontalAlignment="Left" Margin="264,388,0,0" VerticalAlignment="Top" Height="19" Width="240" Click="BntFilterOrderByDeliveredAt"/>
+        <TextBox x:Name = "tbProductId" HorizontalAlignment="Left" Margin="474,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="19"/>
+        <Label Content="Введите артикул продукта" HorizontalAlignment="Left" Margin="468,278,0,0" VerticalAlignment="Top" Height="33" Width="160" RenderTransformOrigin="0.486,0.676"/>
+        <Button Content="Удалить продукт" HorizontalAlignment="Left" Margin="474,340,0,0" VerticalAlignment="Top" Height="19" Width="149" Click="BtnDeleteProductById"/>
+        <Label Content="Введите id заказа" HorizontalAlignment="Left" Margin="647,278,0,0" VerticalAlignment="Top" Height="33" Width="114" RenderTransformOrigin="0.486,0.676"/>
+        <TextBox x:Name = "tbOrderId" HorizontalAlignment="Left" Margin="647,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="19"/>
+        <Button Content="Удалить заказ" HorizontalAlignment="Left" Margin="647,340,0,0" VerticalAlignment="Top" Height="19" Width="114" Click="BtnDeleteOrderById"/>
+        <Button Content="Добавить продукт" HorizontalAlignment="Left" Margin="527,368,0,0" VerticalAlignment="Top" Height="20" Width="123" Click="BtnCreateProduct"/>
+        <Button Content="Добавить заказ" HorizontalAlignment="Left" Margin="527,393,0,0" VerticalAlignment="Top" Height="20" Width="123" Click="BntCreateOrder"/>
+
+    </Grid>
+</Window>

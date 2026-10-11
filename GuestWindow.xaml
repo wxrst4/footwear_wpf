@@ -1,0 +1,32 @@
+﻿<Window x:Class="footwear_wpf.GuestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:footwear_wpf"
+        mc:Ignorable="d"
+        Title="GuestWindow" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid Name = "ProductsDataGrid" Margin="0,0,0,258" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header = "Id продукта" Binding="{Binding article}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Название" Binding="{Binding product_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Производитель" Binding="{Binding manufacturer.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Категория" Binding="{Binding category.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Единица измерения" Binding="{Binding unit}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Цена" Binding="{Binding price}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Поставщик" Binding="{Binding supplier.nane}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Скидка" Binding="{Binding discount}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Кол-во" Binding="{Binding stock}"></DataGridTextColumn>
+                <DataGridTextColumn Header = "Описание" Binding="{Binding description}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        
+    </Grid>
+</Window>
